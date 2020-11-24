@@ -1,1 +1,3 @@
-# rs_img_synth
+# Remote Sensing Image Synthesis
+
+Code for the paper https://arxiv.org/abs/2011.11314. Coming soon ...
