@@ -94,7 +94,7 @@ class DFC2020(VisionDataset):
         sample["sar"] = (
             self.sar_norm(sample.pop("s1")).transpose((1, 2, 0)).astype(np.float32)
         )
-        sample["rgb"] = self.s2_as_rgb(sample.pop("s2"))
+        sample["rgb"] = self.extract_rgb_from_s2(sample.pop("s2"))
         sample["seg"] = sample.pop("dfc").transpose((1, 2, 0))
 
         if self.transforms:
